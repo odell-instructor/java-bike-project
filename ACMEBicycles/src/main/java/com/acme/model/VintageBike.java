@@ -22,4 +22,9 @@ public class VintageBike extends AbstractRoadBike {
     public String getPrefix() {
         return "VB801";
     }
+
+    @Override
+    public String toString() {
+        return "Vintage Bike";
+    }
 }

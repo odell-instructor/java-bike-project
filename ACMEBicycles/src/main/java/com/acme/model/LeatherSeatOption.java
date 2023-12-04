@@ -38,4 +38,14 @@ public class LeatherSeatOption extends AbstractBikeOption {
         return BigDecimal.valueOf(98.99);
     }
 
+    @Override
+    public String getSerialNumber() {
+        return decoratedBike.getSerialNumber();
+    }
+
+    @Override
+    public String toString() {
+        return decoratedBike.toString();
+    }
+
 }

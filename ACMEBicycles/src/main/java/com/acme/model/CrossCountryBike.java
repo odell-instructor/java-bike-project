@@ -22,4 +22,9 @@ public class CrossCountryBike extends AbstractMountainBike {
     public String getPrefix() {
         return "MB605";
     }
+
+    @Override
+    public String toString() {
+        return "Cross Country Bike";
+    }
 }

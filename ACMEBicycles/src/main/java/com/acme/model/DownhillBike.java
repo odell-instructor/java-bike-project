@@ -22,4 +22,9 @@ public class DownhillBike extends AbstractMountainBike {
     public String getPrefix() {
         return "DB505";
     }
+
+    @Override
+    public String toString() {
+        return "Downhill Bike";
+    }
 }

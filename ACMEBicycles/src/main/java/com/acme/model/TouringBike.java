@@ -22,4 +22,9 @@ public class TouringBike extends AbstractRoadBike {
     public String getPrefix() {
         return "TB901";
     }
+
+    @Override
+    public String toString() {
+        return "Touring Bike";
+    }
 }

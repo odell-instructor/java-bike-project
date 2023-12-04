@@ -38,4 +38,14 @@ public class LeatherGripOption extends AbstractBikeOption {
     public String getWheelType() {
         return decoratedBike.getWheelType();
     }
+
+    @Override
+    public String getSerialNumber() {
+        return decoratedBike.getSerialNumber();
+    }
+
+    @Override
+    public String toString() {
+        return decoratedBike.toString();
+    }
 }

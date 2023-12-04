@@ -44,5 +44,14 @@ public class GoldFrameOption extends AbstractBikeOption {
         return FrameColors.GOLD;
     }
 
+    @Override
+    public String getSerialNumber() {
+        return decoratedBike.getSerialNumber();
+    }
+
+    @Override
+    public String toString() {
+        return decoratedBike.toString();
+    }
 
 }

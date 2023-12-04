@@ -1,17 +1,40 @@
 package com.acme.main;
 
-import com.acme.controller.PrepSale;
+import com.acme.controller.InventoryGenerator;
 import com.acme.controller.SerialNumberGenerator;
-import com.acme.model.DownhillBike;
-import com.acme.model.GoldFrameOption;
-import com.acme.model.LeatherSeatOption;
-import com.acme.model.VintageBike;
+import com.acme.model.*;
+
+import java.util.ArrayList;
 
 
 public class Main {
 
     public static void main(String[] args) {
+        //testReceipt();
+        orderItems();
+    }
 
+    public static void orderItems() {
+        SampleOrder order = new SampleOrder();
+        order.welcomeMessage();
+    }
+
+    private static void testReceipt() {
+        ArrayList<AbstractBike> bike = new ArrayList<>();
+        ArrayList<AbstractBike> customUpgrade = new ArrayList<>();
+        ArrayList<Accessories> accessoryList = new ArrayList<>();
+        InventoryGenerator gen = new InventoryGenerator();
+        bike.add(gen.getCrossCountryBikeList().get(0));
+        bike.add(gen.getDownhillBikeList().get(0));
+        AbstractBike custom = gen.getVintageBikeList().get(0);
+        custom = new LeatherSeatOption(custom);
+        bike.add(custom);
+        customUpgrade.add(custom);
+        customUpgrade.add(new GoldFrameOption(custom));
+
+        accessoryList.add(0, new Accessories("Helmet", 29.99));
+
+        new SampleReceipt(bike, customUpgrade, accessoryList);
     }
 
     private static void testingSerialNumbers() {
