@@ -72,7 +72,6 @@ public class SampleOrder {
                 "wt - white tires\nnone - no upgrades");
         String upgrade = userIn.next();
         validateUpgrade(upgrade);
-        customOptionsList.add(optionsChoice);
         moreUpgrades();
     }
 
@@ -270,12 +269,15 @@ public class SampleOrder {
         switch (upgrade.toLowerCase()){
             case "ls":
                 optionsChoice = new LeatherSeatOption(bikeChoice);
+                customOptionsList.add(optionsChoice);
                 break;
             case "lg":
                 optionsChoice = new LeatherGripOption(bikeChoice);
+                customOptionsList.add(optionsChoice);
                 break;
             case "wt":
                 optionsChoice = new WhiteTireOption(bikeChoice);
+                customOptionsList.add(optionsChoice);
                 break;
             case "none":
                 break;
